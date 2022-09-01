@@ -1,0 +1,298 @@
+:root {
+  --light-grayish-blue: hsl(227, 47%, 96%);
+  --lime-green: hsl(163, 72%, 41%);
+  --light-grey: hsl(230, 22%, 74%);
+  --light-red: hsl(356, 69%, 56%);
+  --light-grey-back: hsl(227, 47%, 96%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 6.4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text {
+  color: hsl(228, 12%, 44%);
+  font-weight: 600;
+}
+
+h2 {
+  color: hsl(228, 12%, 44%);
+  font-weight: 600;
+}
+
+/*********************/
+/*DASHBOARD ITSELF*/
+
+.dashboard-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 3.2rem;
+  margin: 2.4rem;
+}
+
+.dashboard {
+  padding: 0.4rem;
+  width: 100%;
+  text-align: center;
+  background-color: hsl(225, 100%, 98%);
+  border-top: 6px solid blue;
+  border-radius: 9px;
+}
+
+.dashboard:hover {
+  background-color: hsl(227, 47%, 93%);
+}
+
+/******************/
+/*HELPER CLASSES FOR BORDER TOP*/
+
+.fb {
+  border-top-color: hsl(208, 92%, 53%);
+}
+
+.twt {
+  border-top-color: hsl(203, 89%, 53%);
+}
+
+.insta {
+  border-top-color: hsl(329, 70%, 58%);
+}
+
+.yt {
+  border-top-color: hsl(348, 97%, 39%);
+}
+/***********************************/
+/*FOLLOWER SECTION*/
+.follower-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.follower-social {
+  font-size: 1.2rem;
+}
+
+.follower-text {
+  letter-spacing: 0.5rem;
+  color: var(--light-grey);
+}
+
+.follower-track {
+  font-size: 1rem;
+  padding: 0.4rem;
+  font-weight: 700;
+}
+
+/***********************************************/
+/*HELPER CLASSES*/
+.up {
+  color: var(--lime-green);
+}
+
+.down {
+  color: var(--light-red);
+}
+
+.pad {
+  padding: 2.4rem;
+}
+
+/**************************************************/
+/*SECOND SECTION*/
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3rem;
+  margin: 1.2rem;
+  padding: 1.2rem;
+}
+
+.overview-s {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 3rem;
+}
+
+.overview-s:hover {
+  background-color: hsl(227, 47%, 93%);
+}
+
+.active-color {
+  color: hsl(230, 17%, 14%);
+}
+.overview-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+
+.overview-number {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.overview-track {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.overview-1,
+.overview-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/************************/
+/*DARK MODE*/
+label {
+  position: absolute;
+  width: 4.5rem;
+  height: 2.5rem;
+  right: 2rem;
+  top: 2rem;
+  border: 2px solid none;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+
+label::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  left: 0.3rem;
+  top: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  transition: 0.4s;
+}
+
+label.active::before {
+  left: 2.4rem;
+  background: white;
+}
+/***************************/
+/*DARK THEME*/
+
+.background {
+  background-color: hsl(230, 17%, 14%);
+}
+
+.active-d {
+  color: white;
+}
+
+.active-c {
+  background-color: hsl(232, 19%, 13%);
+}
+
+.active-c:hover {
+  background-color: hsl(230, 17%, 20%);
+}
+
+/***************************************************/
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .dashboard-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-name {
+    font-size: 1.8rem;
+  }
+  .dashboard-section {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .follower-number {
+    font-size: 1.2rem;
+  }
+
+  .follower-text {
+    font-size: 1rem;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+ 
+  }
+}
+
+@media (max-width: 520px) {
+  .header-name {
+    font-size: 1.2rem;
+  }
+  .dashboard-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .follower-number {
+    font-size: 1rem;
+  }
+
+  .follower-text {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .dashboard-section {
+    width: 100%;
+  }
+}
